@@ -1,13 +1,276 @@
-<!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Areta Informatics College</title>
   <link href="./output.css" rel="stylesheet">
+  <link rel="icon" href="../assets/aic.png" type="image/png">
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-4">
+          <div>
+            <img src="../assets/aic.png" alt="Website Logo" class="h-18 mr-4"> 
+            </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="index.html" class="hover:bg-gray-200">Home</a>
+            <a href="pendaftaran.html" class="hover:bg-gray-200">Pendaftaran</a>
+            <a href="blog.html" class="hover:bg-gray-200">Blog</a>
+            <a href="tentang.html" class="hover:bg-gray-200">Tentang</a>
+            <a href="kontak.html" class="hover:bg-gray-200">Kontak</a>
+          </div>
+          <button id="hamburgerButton" class="md:hidden">
+            <img src= "../assets/hamburger.png" class="mx-2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          </img>
+          </button>
+        </div>
+      </header>
+    
+      <div id="mobileMenu" class=" hidden fixed top-8 left-0 right-0 bottom-8 z-10 bg-white">
+        <div class="py-4 ">
+          <div class="flex justify-end px-4 ">
+            <button id="closeButton">
+              <img src="../assets/close.png" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            </img>
+            </button>
+          </div>
+          <img src="../assets/aic.png" alt="Website Logo" class="h-14 ml-2 "> 
+          <div class="mt-4">
+            <a href="index.html" class="block py-2 px-4 hover:bg-gray-200">Home</a>
+            <a href="pendaftaran.html" class="block py-2 px-4 hover:bg-gray-200">Pendaftaran</a>
+            <a href="blog.html" class="block py-2 px-4 hover:bg-gray-200">Blog</a>
+            <a href="tentang.html" class="block py-2 px-4 hover:bg-gray-200">Tentang</a>
+            <a href="kontak.html" class="block py-2 px-4 hover:bg-gray-200">Kontak</a>
+          </div>
+        </div>
+      </div>
+    
+    
+    
+      <script>
+        const hamburgerButton = document.getElementById('hamburgerButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeButton = document.getElementById('closeButton');
+        const icon = document.getElementById('icon');
+        const websiteIcon = document.getElementById('websiteIcon');
+    
+        hamburgerButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          icon.classList.toggle('hidden');
+          websiteIcon.classList.toggle('hidden');
+        });
+    
+        closeButton.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          icon.classList.remove('hidden'); 
+          websiteIcon.classList.add('hidden');
+        });
+      </script>
+
+<body>
+    <div class="relative bg-cover bg-center h-screen" style="background-image: url('../assets/image1.jpg');">
+        <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center text-center">
+            <h1 class="text-6xl font-bold text-white mb-4">Kuliah Langsung Kerja</h1>
+            <p class="mb-8 text-2xl text-white">Bergabung bersama kami untuk menjadi IT Professional.</p>
+            <button class="bg-blue-500 hover:bg-blue-700 active:scale-90 hover:scale-95 text-white font-bold py-4 px-6 rounded transition transform duration-300 ease-in-out">
+                Daftar
+            </button>
+        </div>
+    </div>
+
+    <div class="text-dark-600 text-center md:text-4xl text-2xl font-bold my-12">
+    Promo Kuliah
+    </div>
+    
+
+    <div class="container mx-auto ">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4 ">
+            <div class="relative">
+                <img src="../assets/image1.jpg" alt="Gambar 1" class="w-full h-96" />
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-black text-white text-center">
+                    <h2 class="text-2xl font-bold">Dapatkan Beasiswa Hingga 50%!</h2>
+                    <p>Daftar sekarang dan raih mimpimu!</p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="../assets/image2.jpg" alt="Gambar 2" class="w-full h-96 " />
+                <div class="absolute top-0 left-0 right-0 p-4 bg-white/80 text-gray-800 text-center">
+                    <h2 class="text-2xl font-bold">Program Studi Terbaru!</h2>
+                    <p>Kuliah sambil kerja, impianmu jadi nyata.</p>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="../assets/image3.jpg" alt="Gambar 3" class="w-full h-96" />
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-black/70 text-yellow-300 text-center">
+                    <h2 class="text-2xl font-bold">Diskon Spesial untuk Pendaftar Awal!</h2>
+                    <p>Segera daftarkan dirimu!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="text-dark-600 text-center md:text-4xl text-2xl font-bold py-12">
+    Mengapa Harus Kuliah Di AIC?
+</div>
+    <div class="container mx-auto ">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 ">
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-500 hover:shadow-xl hover:opacity-90">
+                <div class="bg-blue-600 shadow-lg rounded-lg px-5 py-6 hover:bg-white">
+                <h2 class="text-2xl font-bold mb-4">Mengapa Kuliah?</h2>
+                <ul class="list-disc pl-6">
+                    <li><strong>Pengembangan Diri:</strong> Kuliah akan membantu Anda mengembangkan potensi diri secara maksimal.</li>
+                    <li><strong>Peluang Karir:</strong> Lulusan perguruan tinggi memiliki peluang karir yang lebih luas.</li>
+                    <li><strong>Jaringan Alumni:</strong> Anda akan mendapatkan jaringan alumni yang luas dan bermanfaat.</li>
+                </ul>
+                </div>
+                </div>
+            <div class="bg-white rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-blue-500 hover:shadow-xl hover:opacity-90">
+                <div class="bg-blue-600 shadow-lg rounded-lg px-5 py-6 hover:bg-white">
+                <h2 class="text-2xl font-bold mb-4">Benefit Kuliah di Kampus Kami</h2>
+                <ul class="list-disc pl-6 ">
+                    <li><strong>Beasiswa:</strong> Kami menawarkan berbagai jenis beasiswa untuk meringankan biaya kuliah.</li>
+                    <li><strong>Fasilitas Modern:</strong> Nikmati fasilitas kampus yang lengkap dan modern.</li>
+                    <li><strong>Program Pertukaran Pelajar:</strong> Dapatkan pengalaman belajar di luar negeri.</li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="text-dark-600 text-center md:text-4x1 text-2x1 font-bold py-12">
+    Mahasiswa Kami Berasal Dari Berbagai Perusahaan
+</div>
+
+<div class="relative overflow-hidden h-32 bg-gray-100">
+<div class="flex items-center animate-scroll mt-6">
+    <img src="../assets/image1.jpg" alt="logo 1" class="h-16 mr-4 repeat-x">
+    <img src="../assets/image1.jpg" alt="logo 2" class="h-16 mr-4 repeat-x">
+    <img src="../assets/image1.jpg" alt="logo 3" class="h-16 mr-4 repeat-x">
+    <img src="../assets/image1.jpg" alt="logo 4" class="h-16 mr-4 repeat-x">
+    <img src="../assets/image1.jpg" alt="logo 5" class="h-16 mr-4 repeat-x"> 
+</div>
+</div>
+<div class="bg-gray-400 py-8 mt-20 rounded-b-lg">
+    <div class="text-dark-600 text-center md:text-4xl text-2xl font-bold mt-4">
+        Program Studi
+    </div>
+
+    <div class="container md:mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 py-12 ">
+        <div class="bg-white shadow-lg rounded-lg px-5 py-6 hover:bg-blue-100">
+            <img src="../assets/image1.jpg" alt="Gambar 1" class="rounded-lg mb-4 motion-preset-pop motion-duration-2000">
+            <h2 class="text-xl font-bold motion-preset-shrink motion-duration-2000">Teknik Informatika</h2>
+            <p class="text-gray-700 motion-preset-shrink motion-duration-2000">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur ea vel voluptatibus quod, voluptatem libero aspernatur maxime aliquam adipisci optio.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg px-5 py-6 hover:bg-blue-100">
+            <img src="../assets/image2.jpg" alt="Gambar 2" class="rounded-lg mb-4 motion-preset-pop motion-duration-2000">
+            <h2 class="text-xl font-bold motion-preset-shrink motion-duration-2000">Sistem Informasi</h2>
+            <p class="text-gray-700 motion-preset-shrink motion-duration-2000">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos odio enim totam iure, delectus similique facilis facere sint distinctio.</p>
+        </div>
+        <div class="bg-white shadow-lg rounded-lg px-5 py-6 hover:bg-blue-100">
+            <img src="../assets/image3.jpg" alt="Gambar 3" class="rounded-lg mb-4 motion-preset-pop motion-duration-2000">
+            <h2 class="text-xl font-bold motion-preset-shrink motion-duration-2000">Bisnis Digital</h2>
+            <p class="text-gray-700 motion-preset-shrink motion-duration-2000">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores suscipit cupiditate, quas quibusdam officiis ducimus qui eos corporis tenetur magnam?.</p>
+        </div>
+    </div>    
+</div>
+
+    <div class="text-dark-600 text-center md:text-4xl text-2xl font-bold mt-8">
+        Blog
+    </div>
+
+    <div class="container mx-auto">    
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4 py-4">
+            <div class="bg-blue-500 shadow-md rounded-lg p-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration- mt-8 group md:mx-auto mx-4">
+                <img src="../assets/image1.jpg" alt="Gambar Postingan Pertama" class="mb-4">
+                <h2 class="text-xl font-bold mb-2 group-hover:text-white">Judul Postingan Pertama</h2>
+                <p class="mb-4 group-hover:text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, suscipit dicta earum quisquam iste illum odit, nulla optio et possimus, eveniet harum? Dolore aspernatur recusandae assumenda impedit quae voluptatum enim..</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-black-500 font-bold py-2 px
+                    rounded transition duration-300 ease-in-out hover:translate-y-1 hover:scale-110">
+                  Baca Selengkapnya
+                </button>
+                </div>
+             </div>
+
+            <div class="bg-blue-500 shadow-md rounded-lg p-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 mt-8 group md:mx-auto mx-4">
+                <img src="../assets/image2.jpg" alt="Gambar Postingan Pertama" class="mb-4">
+                <h2 class="text-xl font-bold mb-2 group-hover:text-white">Judul Postingan Kedua</h2>
+                <p class="mb-4 group-hover:text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, suscipit dicta earum quisquam iste illum odit, nulla optio et possimus, eveniet harum? Dolore aspernatur recusandae assumenda impedit quae voluptatum enim..</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-black-500 font-bold py-2 px
+                    rounded transition duration-300 ease-in-out hover:translate-y-1 hover:scale-110">
+                  Baca Selengkapnya
+                </button>
+                </div>  
+            </div>
+
+            <div class="bg-blue-500 shadow-md rounded-lg p-6 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500 duration-300 mt-8 group md:mx-auto mx-4">
+                <img src="../assets/image3.jpg" alt="Gambar Postingan Pertama" class="mb-4 ">
+                <h2 class="text-xl font-bold mb-2 group-hover:text-white">Judul Postingan Ketiga</h2>
+                <p class="mb-4 group-hover:text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus, suscipit dicta earum quisquam iste illum odit, nulla optio et possimus, eveniet harum? Dolore aspernatur recusandae assumenda impedit quae voluptatum enim..</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-black-500 font-bold py-2 px
+                    rounded transition duration-300 ease-in-out hover:translate-y-1 hover:scale-110">
+                  Baca Selengkapnya
+                </button>
+                </div>  
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+<footer class="bg-yellow-400 text-black py-10 mt-20 rounded-t-lg">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div class="text-center md:text-left mb-6 md:mb-0">
+            <img src="../assets/aic.png" alt="Areta Informatics College" class="h-28 mb-2 mx-auto">
+            <p class="text-white text-lg">© 2024 Areta Informatics College. All rights reserved.</p>
+        </div>
+        <nav class="mb-6 md:mb-0">
+            <ul class="flex flex-wrap justify-center md:justify-end space-x-6">
+                <li><a href="#" class="text-xl hover:text-white transition duration-300 font-semibold">Home</a></li>
+                <li><a href="#" class="text-xl hover:text-white transition duration-300 font-semibold">About</a></li>
+                <li><a href="#" class="text-xl hover:text-white transition duration-300 font-semibold">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="flex flex-col items-center md:items-end">
+            <p class="text-white mb-2 font-semibold text-center text-xl">Ikuti Sosial Media</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-white hover:text-blue-700 transition duration-300" aria-label="Facebook">
+                    <img src="../assets/facebook.png" alt="Facebook" class="h-10 w-10">
+                </a>
+                <a href="#" class="text-white hover:text-white transition duration-300" aria-label="Twitter">
+                    <img src="../assets/twitterx.png" alt="Twitter" class="h-10 w-10">
+                </a>
+                <a href="#" class="text-white hover:text-white transition duration-300" aria-label="Instagram">
+                    <img src="../assets/instagram.png" alt="Instagram" class="h-10 w-10">
+                </a>
+                <a href="#" class="text-white hover:text-white transition duration-300" aria-label="LinkedIn">
+                    <img src="../assets/linkedin.png" alt="LinkedIn" class="h-10 w-10">
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mt-4 rounded-lg py-2 md:mx-0 mx-4">
+        <h3 class="text-center font-bold mb-4 text-2xl mt-2 ">Lokasi Kami</h3>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31728.582321201186!2d106.59780813704833!3d-6.254140509784039!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fc44e133dbff%3A0xd0cb68b5e6cf4055!2sAreta%20Informatics%20College!5e0!3m2!1sid!2sid!4v1731671378697!5m2!1sid!2sid" 
+                width="100%" 
+                height="200" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy"
+                class="rounded-lg md:mt-12 ">
+            </iframe>
+    </div>
+
+    <div class="container mx-auto md:px-0 px-6 mt-8 rounded-lg">
+        <h3 class="text-center  font-semibold mb-4 text-xl">Lokasi Kami</h3>
+        <div class="flex justify-center">
+      
+        </div>
+    </div>
+</footer>
+
+
+
 </body>
 </html>
